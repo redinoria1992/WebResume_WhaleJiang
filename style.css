@@ -1,0 +1,108 @@
+/*css reset*/
+*{margin:0; padding: 0; box-sizing: border-box;}
+ul,ol{
+    list-style: none;
+}
+img{
+    max-width: 100%;
+}
+
+
+/*page styles */
+section.summary{
+    height: 100vh;  /*100 vh = viewport height*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  /*  background: transparent url(https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-537815.png) no-repeat;*/
+}
+section.summary img.avatar{
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+
+}
+section.summary .text{
+    line-height: 1.5;
+    text-align: center;
+}
+
+/*设置作品区域的位置*/
+section.works{
+    height: 100vh;
+    background: rgb(244,244, 244);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+@media (max-width:500px){
+    section.works{
+        height: auto;
+        min-height: 100vh;
+    }
+}
+
+section.works img{
+    max-width: 200px;
+} 
+section.works .imageWrapper{
+    padding: 10px 10px 3px;
+    background: white;
+}
+
+/*设置作品区的移动端效果及漂浮位置*/
+section.works > ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+@media (max-width:500px){
+    section.works{
+        padding: 1em;
+    }
+    section.works > ul{
+        justify-content: center;
+    }
+}
+
+/*取消h3默认加粗*/
+section.works > ul h3{
+    font-weight: normal;
+    font-size: 16px;
+    padding-left: 10px;
+    margin: 8px 0;
+}
+
+/*works内修改h2的大小*/
+section.works > h2, section.contacts > h2{
+    font-size: 32px;
+    margin-bottom: 1em;
+}
+
+section.contacts{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+section.contacts > dl{
+    display: flex;
+    flex-wrap: wrap;
+    width: 20em;
+}
+
+section.contacts > dl a{
+    text-decoration: underline;
+}
+
+section.contacts > dl > dt{
+    width: 3em;
+}
+
+section.contacts > dl > dd{
+    width: 17em;
+}
